@@ -1,5 +1,1 @@
-PGHOST='ep-twilight-breeze-a57wj7zu.us-east-2.aws.neon.tech'
-PGDATABASE='neondb'
-PGUSER='neondb_owner'
-PGPASSWORD='cdx7NC5eSJmO'
-ENDPOINT_ID='ep-twilight-breeze-a57wj7zu'
+.
