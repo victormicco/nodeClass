@@ -4,7 +4,8 @@ Content-type: application/json
 {
     "title": "Memeso tomando no cu e rindo",
     "description": "Esse é o primeiro video do memeso",
-    "duration": 160
+    "price": "10,00",
+    "image": "https://images.tcdn.com.br/img/img_prod/167552/90_macbook_pro_myd8ll_a_13_3_chip_m1_8gb_ssd_256gb_touchbar_12517_1_de838ece1d8fe77b5764dcbcec5c9c84.png"
 }
 
 ###
@@ -13,14 +14,15 @@ GET http://localhost:3333/videos
 
 ###
 
-PUT http://localhost:3333/videos/74eb557d-b6c6-4790-a0cb-a972e61c163f
+PUT http://localhost:3333/videos/bca58beb-ad22-4a3c-8437-8d7779471305
 Content-type: application/json
 
 {
-    "title": "Video 3",
-    "description": "Esse é o terceiro video",
-    "duration": 120
+    "title": "Macbook Pro M1",
+    "description": "Macbook Pro M1 13.3' 8GB SSD 256GB Touchbar",
+    "price": "8.000,00",
+    "image": "https://images.tcdn.com.br/img/img_prod/167552/90_macbook_pro_myd8ll_a_13_3_chip_m1_8gb_ssd_256gb_touchbar_12517_1_de838ece1d8fe77b5764dcbcec5c9c84.png"
 }
 
 ###
-DELETE http://localhost:3333/videos/74eb557d-b6c6-4790-a0cb-a972e61c163f
+DELETE http://localhost:3333/videos/bca58beb-ad22-4a3c-8437-8d7779471305

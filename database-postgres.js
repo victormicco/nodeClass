@@ -21,20 +21,20 @@ export class DatabasePostgres {
   async create(video) {
     const videoId = randomUUID();
 
-    const { title, description, duration } = video;
+    const { title, description, price, image } = video;
 
     await sql`
-      insert into videos (id, title, description, duration)
-      VALUES (${videoId}, ${title}, ${description}, ${duration})
+      insert into videos (id, title, description, price, image)
+      VALUES (${videoId}, ${title}, ${description}, ${price}, ${image})
     `;
   }
 
   async update(id, video) {
-    const { title, description, duration } = video;
+    const { title, description, price, image } = video;
 
     await sql`
       update videos
-      set title = ${title}, description = ${description}, duration = ${duration}
+      set title = ${title}, description = ${description}, price = ${price}, image = ${image}
       WHERE id = ${id}
     `;
   }

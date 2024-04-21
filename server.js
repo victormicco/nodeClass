@@ -18,12 +18,13 @@ const server = fastify();
 const database = new DatabasePostgres();
 
 server.post("/videos", async (request, reply) => {
-  const { title, description, duration } = request.body;
+  const { title, description, price, image } = request.body;
 
   await database.create({
     title,
     description,
-    duration,
+    price,
+    image,
   });
 
   return reply.status(201).send();
@@ -38,12 +39,13 @@ server.get("/videos", async (request) => {
 
 server.put("/videos/:id", async (request, reply) => {
   const videoId = request.params.id;
-  const { title, description, duration } = request.body;
+  const { title, description, price, image } = request.body;
 
   await database.update(videoId, {
     title,
     description,
-    duration,
+    price,
+    image,
   });
   return reply.status(204).send();
 });
